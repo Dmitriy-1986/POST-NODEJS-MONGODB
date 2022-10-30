@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- HEAD -->
+	<%- include('./partials/head.ejs') %>
+	
+<body>
+
+	<!-- HEADER -->
+	<%- include('./partials/header.ejs') %>
+
+	<div class="container">
+		<% if( homes.length ) { %>
+			  
+			<% homes.forEach(({ title, desc }) => { %>
+	            <h3>
+	                <%= title %>
+				</h3>
+				<p class="home-description">
+					<%= desc %>
+				</p>
+	        <% }) %>
+
+		<% } %>
+	</div>
+		
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- HEAD -->
+	<%- include('./partials/head.ejs') %>
+	
+<body>
+
+	<!-- HEADER -->
+	<%- include('./partials/header.ejs') %>
+	
+	<!-- MAIN -->
+	<div class="container">
+		<% if( contacts.length ) { %>
+			  
+			<% contacts.forEach(({ link, name }) => { %>
+	            <p class="contacts">
+	                <a href="<%= link %>"><%= name %></a>
+	            </p>
+	        <% }) %>
+
+		<% } %>
+	</div>
+
+</body>
+</html>

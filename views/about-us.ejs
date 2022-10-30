@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<!-- HEAD -->
+	<%- include('./partials/head.ejs') %>
+	
+<body>
+
+	<!-- HEADER -->
+	<%- include('./partials/header.ejs') %>
+	
+	<div class="container">
+		<% if( abouts.length ) { %>
+			  
+			<% abouts.forEach(({ title, description }) => { %>
+	            <h3>
+	                <%= title %>
+				</h3>
+				<p class="home-description">
+					<%= description %>
+				</p>
+	        <% }) %>
+
+		<% } %>
+	</div>
+</body>
+</html>
